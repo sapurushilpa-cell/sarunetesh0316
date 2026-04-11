@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .container{
+                text-align:center;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                gap:30px;
+                flex-direction:column;
+            }
+            .ball{
+                width:200px;
+                height:200px;
+                border-radius:50%;
+                position: relative;
+                animation-name:myanimation;
+                animation-delay:1s;
+                animation-duration:15s;
+                animation-iteration-count:infinite;
+                background-color:rgb(28, 38, 231);
+
+            }
+            @keyframes myanimation{
+                0% {lft:0px;top:0px;}
+                25% {lft:200px;top:0px;}
+                50%{lft:200px;top:200px;}
+                75%{lft: 0px;top:200px;}
+                100%{lft:0px;top:0px;}
+            }
+            body{
+                background-image:url(Colors\ of\ Pastel\ Template\ Download\ -\ Free\ PPT\ Backgrounds.jpg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                height:100vh;
+                margin:0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1 style="color:gold;font-size: xx-large;"><i>Infinite Bouncing Ball</i></h1>
+            <p style="font-size: x-large;">Watch the ball bounce smoothly up and down</p>
+            <p style="font-size: x-large;">This animation shows vertical movement using CSS</p>
+            <div class="ball"></div>
+        </div>
+    </body>
+</html>

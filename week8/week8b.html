@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+             .container{
+                text-align:center;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                gap: 50px;
+                flex-direction:column;
+             }
+            .circle{
+                width:200px;
+                height:200px;
+                border-radius:50%;
+                background-color:purple;
+                position:relative;
+                animation-name:myanimation;
+                animation-delay:2s;
+                animation-duration:7s;
+                animation-iteration-count:infinite;
+            }
+            @keyframes myanimation{
+                0%{lft:0px;top:0px;transform:rotate(0deg) translateX(0px);}
+                100%{lft:300px;top:0px;transform:rotate(360deg) translateX(100px);}
+                
+            }
+            body{
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                height:100vh;
+                margin: 2px;;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1 style="font-size:xx-large;"><i>Moving Rotating Circle</i></h1>
+            <p style="font-size: x-large;">Watch the ball moves horizontally and rotate at the same time</p>
+            <p style="font-size:x-large;">This animation combines translation and rotation using CSS</p>
+            <div class="circle"></div>
+        </div>
+        
+    </body>
+</html>
