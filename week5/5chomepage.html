@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Amrita University Login & Campus Details</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #781d0f76, #f4f4f5);
+        }
+
+        /* Container */
+        .container {
+            width: 85%;
+            height: 80vh;
+            display: flex;
+            padding: 30px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        /* Login Section */
+        .login-section {
+            width: 30%;
+            padding: 40px;
+            background: #f5f5f4;
+        }
+
+        .login-section h2 {
+            margin-bottom: 20px;
+            color: #781d0f76;
+        }
+
+        .login-section input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+
+        .login-section button {
+            width: 100%;
+            padding: 12px;
+            background: #781d0f76;
+            color: white;
+            border: none;
+            border-radius: 8px;
+        }
+
+        /* Campus Section */
+        .campus-section {
+            width: 80%;
+            padding: 40px;
+        }
+
+        .campus-section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color:#781d0f76;
+        }
+
+        .campus-buttons {
+            text-align: center;
+        }
+
+        .campus-buttons a {
+            padding: 10px 20px;
+            margin: 10px;
+            background: #eee;
+            border-radius: 25px;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        
+        .campus-details {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            width: 40%;
+            background: #f9f9f9;
+            border-radius: 15px;
+        }
+
+        
+        #coimbatore:target,
+        #amritapuri:target,
+        #bangalore:target,
+        #amaravati:target {
+            display: block;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Login Section -->
+        <div class="login-section">
+            <h2>Amrita Login</h2>
+            <input type="text" placeholder="Username">
+            <input type="password" placeholder="Password">
+            <button>Login</button>
+        </div>
+
+        <!-- Campus Section -->
+        <div class="campus-section">
+
+            <h2>Select Campus</h2>
+
+            <div class="campus-buttons">
+                <a href="#coimbatore">Coimbatore</a>
+                <a href="#amritapuri">Amritapuri</a>
+                <a href="#bangalore">Bangalore</a>
+                <a href="#amaravati">Amaravati</a>
+            </div>
+
+            <div id="coimbatore" class="campus-details"  >
+                <h3>Coimbatore Campus</h3>
+                <p>Located in Tamil Nadu. Famous for Engineering and Technology programs.</p>
+                <img src="coim.png" width="70%">
+            </div>
+
+            <div id="amritapuri" class="campus-details">
+                <h3>Amritapuri Campus</h3>
+                <p>Located in Kerala. Known for Arts, Science and Research excellence.</p>
+                <img src="amritapuri.png" width="70%">
+
+            </div>
+
+            <div id="bangalore" class="campus-details">
+                <h3>Bangalore Campus</h3>
+                <p>Located in Karnataka. Special focus on IT and Management studies.</p>
+                <img src="bang.png" width="70%">
+
+            </div>
+
+            <div id="amaravati" class="campus-details">
+                <h3>Amaravati Campus</h3>
+                <p>Located in Andhra Pradesh. Special focus on IT and Management studies.</p>
+                <img src="amma.jpg.png" width="70%">
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
