@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: 'Poppins', sans-serif;
+        }
+        div{
+            margin: 200px auto;
+            border: solid grey 2px;
+            border-radius: 10px;
+            max-width:300px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 5px 5px 0 grey;
+            min-height: 200px;
+        }
+        h4{
+            margin-top:10px;
+            background-color:steelblue;
+            color: white;
+            padding: 10px;
+            box-shadow:0 0 3px grey;
+            border-radius: 5px;
+        }
+        input{
+            width: 250px;
+            padding: 10px;
+            border-radius: 5px;
+            border: solid grey 1px;
+            box-shadow: 0 0 3px grey;
+        }
+        input:focus{
+            outline-color: steelblue;
+        }
+    </style>
+</head>
+<body>
+    <p>CSE25047, NETESH</p>
+    <div>
+        <h4>Validation</h4>
+        <p>Mobile Number</p>
+        <input type="text" id="number" onblur="check()" placeholder="Enter phone number">
+        <p id="result"></p>
+    </div>
+    <script>
+        function check(){
+            let x = document.getElementById("number").value;
+            let msg=document.getElementById("result");
+            let phno = document.getElementById("number");
+            let pattern =/^[0-9]{10}$/;
+            if(x.match(pattern)){
+                msg.innerHTML="valid phone number";
+                msg.style.color="green";
+                phno.style.outlineColor="green"
+                phno.style.backgroundColor="lightgreen";
+            }
+            else if(x.length==0){
+                msg.innerHTML="phone number cannot be empty";
+                msg.style.color="red";
+                
+            }
+            else{
+                msg.innerHTML="invalid phone number";
+                msg.style.color="red";
+                phno.style.outlineColor="red";
+                phno.style.backgroundColor="lightcoral";
+            }
+        }
+    </script>
+    
+</body>
+</html>
