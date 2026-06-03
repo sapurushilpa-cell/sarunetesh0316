@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Largest of Five Numbers</title>
+</head>
+<body style="text-align:center; margin-top:50px; font-family:Arial;">
+
+<h2>Find Largest of Five Numbers</h2>
+
+<input type="number" id="n1" placeholder="Enter 1st number"><br><br>
+<input type="number" id="n2" placeholder="Enter 2nd number"><br><br>
+<input type="number" id="n3" placeholder="Enter 3rd number"><br><br>
+<input type="number" id="n4" placeholder="Enter 4th number"><br><br>
+<input type="number" id="n5" placeholder="Enter 5th number"><br><br>
+
+<button onclick="findLargest()">Find Largest</button>
+
+<h3 id="result"></h3>
+
+<script>
+function findLargest() {
+    let a = parseInt(document.getElementById("n1").value);
+    let b = parseInt(document.getElementById("n2").value);
+    let c = parseInt(document.getElementById("n3").value);
+    let d = parseInt(document.getElementById("n4").value);
+    let e = parseInt(document.getElementById("n5").value);
+
+    let largest = a;
+
+    if (b > largest) {
+        largest = b;
+    }
+    if (c > largest) {
+        largest = c;
+    }
+    if (d > largest) {
+        largest = d;
+    }
+    if (e > largest) {
+        largest = e;
+    }
+
+    document.getElementById("result").innerHTML =
+        "Largest number is: " + largest;
+}
+</script>
+
+</body>
+</html>

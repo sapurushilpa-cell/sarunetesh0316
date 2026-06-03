@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <input type="number" id="subject1" placeholder="Enter subject1 marks:"><br>
+        <input type="number" id="subject2" placeholder="Enter subject2 marks:"><br>
+        <input type="number" id="subject3" placeholder="Enter subject3 marks:"><br>
+        <input type="number" id="subject4" placeholder="Enter subject4 marks:"><br>
+        <input type="number" id="subject5" placeholder="Enter subject5 marks:"><br>
+        <input type="number" id="subject6" placeholder="Enter subject6 marks:"><br>
+        <button onclick="grade()">Grade of the student</button>
+        <script>
+            function grade(){
+                let s1=parseInt(document.getElementById("subject1").value);
+                let s2=parseInt(document.getElementById("subject2").value);
+                let s3=parseInt(document.getElementById("subject3").value);
+                let s4=parseInt(document.getElementById("subject4").value);
+                let s5=parseInt(document.getElementById("subject5").value);
+                let s6=parseInt(document.getElementById("subject6").value);
+                let average=(s1+s2+s3+s4+s5+s6)/6;
+                let grade;
+                if(average<60){
+                    grade="F";
+                }
+                else if(average<70){   
+                    grade="D";
+                }
+                else if(average<80){  
+                    grade="C"; 
+                }
+                else if(average<90){  
+                    grade="B";
+                }
+                else{   
+                    grade="A";
+                }
+                window.alert("grade is: "+grade);
+            }
+
+        </script>
+    </body>
+</html>
